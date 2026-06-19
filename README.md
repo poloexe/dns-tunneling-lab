@@ -46,3 +46,6 @@ After reassembling the query strings, stripping out the rotating domains, and ex
 ## Lab Summary & Key Takeaways
 * Static pattern-matching rules for web traffic (HTTP/S) fail to catch data exfiltration when it is segmented and funneled through protocols like DNS.
 * When analyzing real-world exfiltration, threat actors utilize rotating domain strings to evade basic string filtering, which made the use of dynamic command-line extraction tools like `tshark` and `awk` important.
+
+<br> 
+<div align="center"><strong>🤍 Baruch (and few cups of coffee ☕)</strong></div>
