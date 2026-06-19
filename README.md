@@ -6,7 +6,7 @@
 
 ## Tools and Utilities Used
 * **Network Protocol Analysis:** Wireshark, TShark
-* **Data Manipulation & Decoding:** CyberChef, standard Linux text utilities (`awk`, `tr`)
+* **Data Manipulation & Decoding:** [CyberChef](https://cyberchef.org), standard Linux text utilities (`awk`, `tr`)
 * **Core Concepts Covered:** Protocol abuse (DNS Tunneling), file signatures (Magic Bytes), case-insensitive encoding schemas (Base32), file decompression (GZIP).
 
 ## Technical Methodology
