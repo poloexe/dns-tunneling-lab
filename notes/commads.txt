@@ -1,0 +1,10 @@
+DNS Payload Extraction Command
+tshark -r pirates.pcap -Y "ip.src==10.75.34.13 and udp.dstport==53" -T fields -e dns.qry.name | awk -F. '{print $1}' | tr -d '\n' > clean_payload.txt
+
+Breakdown Of Command Used:
+1. tshark -r pirates.pcap: Reads the specified packet capture file.
+2. -Y "ip.src==10.75.34.13 and udp.dstport==53": Applies a display filter to isolate outbound DNS traffic originating from the compromised endpoint.
+3. -T fields -e dns.qry.name: Extracts only the raw queried domain names.
+4. | awk -F. '{print $1}': Pipes the isolated queries into awk, and separate with the option (-F.) and print only the first column ($1), removing the domains to leave data chunks.
+5. | tr -d '\n': Deletes newline characters to merge the fragmented data chunks into a single continuous string.
+6. > clean_payload.txt: Redirects the final merged string into a text file to decode using CyberChef.
